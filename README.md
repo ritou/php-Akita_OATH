@@ -11,7 +11,7 @@ Usage
 `$secret` is raw secret(not Base32 encoded).
 `$counter` is used HOTP.
     
-`    $oath = new oath();
+`   $oath = new oath();
     
     // Generate HOTP 
     $hotp = $oath->hotp($secret, $counter);
