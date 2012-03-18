@@ -8,11 +8,10 @@ TOTP : http://tools.ietf.org/html/rfc6238
 
 Usage
 ------------------------------------------------------
-`    // raw secret(not Base32 encoded)
-    $secret = \"1234567890\";
-    $counter = 1;
+`$secret` is raw secret(not Base32 encoded).
+`$counter` is used HOTP.
     
-    $oath = new oath();
+`    $oath = new oath();
     
     // Generate HOTP 
     $hotp = $oath->hotp($secret, $counter);
