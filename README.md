@@ -9,7 +9,7 @@ TOTP : http://tools.ietf.org/html/rfc6238
 Usage
 ------------------------------------------------------
 `    // raw secret(not Base32 encoded)
-    $secret = "1234567890";
+    $secret = \"1234567890\";
     $counter = 1;
     
     $oath = new oath();
