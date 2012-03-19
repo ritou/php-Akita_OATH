@@ -64,8 +64,8 @@ class oath
 
 	private function getTimeCounter($manualtime=null)
 	{
-        $ts = (!is_null($manualtime)) ? $manualtime : time();
-		return floor($ts/$this->_timestep);
+        	$calc_ts = (!is_null($manualtime)) ? $manualtime : time();
+		return floor($calc_ts/$this->_timestep);
 	}
 
 	private static function hash($secret, $counter)
