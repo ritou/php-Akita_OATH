@@ -27,7 +27,7 @@ $status = $oath->validateTotp($totp, $secret);
 
 AUTHOR
 ------------------------------------------------------
-@ritou ritou@gmail.com
+@ritou ritou.06@gmail.com
 
 LISENCE
 ------------------------------------------------------
