@@ -7,7 +7,7 @@ class Akita_OATH_Test extends PHPUnit_Framework_TestCase
     private $secret = "1234567890";
     private $counter = 1;
     private $manualtime = 1332083784;
-    
+
     // test for oath->totp
     function test_totp()
     {
@@ -36,6 +36,8 @@ class Akita_OATH_Test extends PHPUnit_Framework_TestCase
         $totp = $oath->totp($this->secret, $this->manualtime);
         $this->assertEquals('142045', $totp, 'Invalid TOTP');
         $this->assertTrue($oath->validateTotp($totp, $this->secret, $this->manualtime), 'TOTP Validation Error');
+        $this->assertTrue($oath->validateTotp('142045', $this->secret, $this->manualtime), 'TOTP Validation Error');
+        $this->assertFalse($oath->validateTotp('0142045', $this->secret, $this->manualtime), 'TOTP Validation Error');
         $current_totp = $oath->totp($this->secret);
         $this->assertFalse($oath->validateTotp($totp, $this->secret), 'TOTP Validation Error');
     }

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Akita_OATH 
+ * Akita_OATH
  *
  * OTP Utility class
  *
@@ -53,13 +53,13 @@ class oath
     public function validateTotp($totp, $secret, $manualtime=null)
     {
         $valid_totp = $this->totp($secret, $manualtime);
-        return ($totp == $valid_totp);
+        return ($totp === $valid_totp);
     }
 
     public function validateHotp($hotp, $secret, $counter)
     {
         $valid_hotp = $this->hotp($secret, $counter);
-        return ($hotp == $valid_hotp);
+        return ($hotp === $valid_hotp);
     }
 
 	private function getTimeCounter($manualtime=null)
