@@ -1,8 +1,19 @@
 language: php
 
-php:
-  - 5.2
-  - 5.3
-  - 5.4
+branches:
+  only:
+    - master
 
-script: phpunit test
+php:
+  - '5.3'
+  - '5.4'
+  - '5.5'
+  - '7.0'
+  - hhvm
+
+install:
+  - composer install
+
+matrix:
+  allow_failures:
+    - php: hhvm

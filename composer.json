@@ -1,0 +1,31 @@
+{
+  "name": "akita/oath",
+  "type": "library",
+  "description": "This is php OATH One Time Passwords Library.",
+  "keywords": [
+    "oath",
+    "otp",
+    "htop",
+    "ttop"
+  ],
+  "homepage": "https://github.com/ritou/php-Akita_OATH",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Ryo Ito",
+      "email": "ritou.06@gmail.com",
+      "homepage": "http://xri.net/=ritou/(+blog)"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Oath\\": "src/"
+    }
+  },
+  "require": {
+    "php": ">=5.2"
+  },
+  "require-dev":{
+    "phpunit/phpunit": "~4.8"
+  }
+}
